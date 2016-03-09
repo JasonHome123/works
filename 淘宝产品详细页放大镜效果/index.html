@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝产品详细页放大镜效果</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+
+</head>
+<body>
+    <div class="box">
+        <div class="tb-booth tb-pic tb-s310">
+            <a href=""><img class="jqzoom" src="img/01_mid.jpg" rel="img/01.jpg"></img></a>
+        </div>
+        <ul id="thumblist" class="tb-thumb">
+            <li class="curr">
+                <div class="tb-pic tb-s40">
+                    <a href="">
+                        <img src="img/01_small.jpg" mid="img/01_mid.jpg" big="img/01.jpg" />
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="tb-pic tb-s40">
+                    <a href="">
+                        <img src="img/02_small.jpg" mid="img/02_mid.jpg" big="img/02.jpg"/>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="tb-pic tb-s40">
+                    <a href="">
+                        <img src="img/03_small.jpg" mid="img/03_mid.jpg" big="img/03.jpg"/>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="tb-pic tb-s40">
+                    <a href="">
+                        <img src="img/04_small.jpg" mid="img/04_mid.jpg" big="img/04.jpg"/>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="tb-pic tb-s40">
+                    <a href="">
+                        <img src="img/05_small.jpg" mid="img/05_mid.jpg" big="img/05.jpg"/>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="tb-pic tb-s40">
+                    <a href="#">
+                        <img src="img/06_small.jpg" mid="img/06_mid.jpg" big="img/06.jpg"/>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    
+    <script type="text/javascript" src="../jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="jquery.imageZoom.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".jqzoom").imagezoom();
+        });
+        $("#thumblist li a").click(function(){
+        $(this).parents("li").addClass("curr").siblings().removeClass("curr");
+        $(".jqzoom").attr("src", $(this).find("img").attr("mid"));
+        $(".jqzoom").attr("rel", $(this).find("img").attr("big"));
+        return false;
+    });
+    </script>
+</body>
+</html>

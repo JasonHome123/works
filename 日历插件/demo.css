@@ -1,0 +1,70 @@
+body,h1,h2,h3,h4,h5,h6,table{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+.calendar-wrapper{
+    position: relative;
+}
+input{
+    width: 200px;height: 28px;border: 1px solid #ddd;
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+.h-tt{
+    font-family: "microsoft yahei";
+    font-size: 14px;
+    text-align: center;
+}
+.calendar{
+    width: 254px;
+    border: 1px solid #ccc;
+    display: none;
+}
+.calendar-hd{
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+}
+.calendar-hd a{
+    position: absolute;
+    top: 1px;
+}
+.calendar-hd a.prev{
+    left: 5px;
+}
+.calendar-hd a.next{
+    right: 5px;
+}
+.calendar-bd{
+    border-top: 1px solid #ddd;
+    width: 252px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.calendar-bd th,.calendar-bd td{
+    padding: 0px;
+}
+.calendar-bd th,.calendar-bd td{
+    font-size: 12px;
+    line-height: 23px;
+    height: 24px;
+    width: 36px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.calendar-bd td{
+    cursor: pointer;
+}
+.calendar-bd td.gray{
+    color: #aaa;
+    cursor: default;
+}
+.calendar-bd td.today,.calendar-bd td:hover{
+    border: 1px solid red;
+}
